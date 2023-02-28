@@ -1,7 +1,7 @@
 import PhoneNumberKit
-@testable import PhoneNumberKitDependencyLive
 import XCTest
 @testable import PhoneNumberKitDependency
+@testable import PhoneNumberKitDependencyLive
 
 final class PhoneNumberKitDependencyTests: XCTestCase {
 	func testParseSingle() throws {

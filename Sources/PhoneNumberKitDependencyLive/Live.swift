@@ -1,8 +1,8 @@
 import Dependencies
 import Foundation
 import PhoneNumberKit
-import PhoneNumberKitDependency
 import enum PhoneNumberKit.PhoneNumberType
+import PhoneNumberKitDependency
 
 public extension PhoneNumberKitClient {
 	static func live(phoneNumberKit: PhoneNumberKitProtocol = PhoneNumberKit()) -> Self {
@@ -13,8 +13,16 @@ public extension PhoneNumberKitClient {
 					withRegion: request.region ?? phoneNumberKit.defaultRegionCode(),
 					ignoreType: request.ignoreType
 				)
-				
-				return PhoneNumber(numberString: number.numberString, countryCode: number.countryCode, leadingZero: number.leadingZero, nationalNumber: number.nationalNumber, numberExtension: number.numberExtension, type: .init(type: number.type), regionID: number.regionID)
+
+				return PhoneNumber(
+					numberString: number.numberString,
+					countryCode: number.countryCode,
+					leadingZero: number.leadingZero,
+					nationalNumber: number.nationalNumber,
+					numberExtension: number.numberExtension,
+					type: .init(type: number.type),
+					regionID: number.regionID
+				)
 			},
 
 			parseMultiple: { request in
@@ -24,7 +32,15 @@ public extension PhoneNumberKitClient {
 					ignoreType: request.ignoreType,
 					shouldReturnFailedEmptyNumbers: request.shouldReturnFailedEmptyNumbers
 				)
-				return numbers.map { number in PhoneNumber(numberString: number.numberString, countryCode: number.countryCode, leadingZero: number.leadingZero, nationalNumber: number.nationalNumber, numberExtension: number.numberExtension, type: .init(type: number.type), regionID: number.regionID) }
+				return numbers.map { number in PhoneNumber(
+					numberString: number.numberString,
+					countryCode: number.countryCode,
+					leadingZero: number.leadingZero,
+					nationalNumber: number.nationalNumber,
+					numberExtension: number.numberExtension,
+					type: .init(type: number.type),
+					regionID: number.regionID
+				) }
 			}
 		)
 	}

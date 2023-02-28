@@ -1,12 +1,5 @@
-//
-//  File.swift
-//  
-//
-//  Created by Quico Moya on 28.02.23.
-//
-
-import Foundation
 import Dependencies
+import Foundation
 import PhoneNumberKit
 
 struct TestPhoneNumberKit: PhoneNumberKitProtocol {

@@ -15,4 +15,3 @@ public protocol PhoneNumberKitProtocol {
 
 	func defaultRegionCode() -> String
 }
-
