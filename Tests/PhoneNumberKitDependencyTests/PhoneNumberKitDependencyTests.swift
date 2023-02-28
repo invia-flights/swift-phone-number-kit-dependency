@@ -1,5 +1,5 @@
 import PhoneNumberKit
-import PhoneNumberKitDependencyLive
+@testable import PhoneNumberKitDependencyLive
 import XCTest
 @testable import PhoneNumberKitDependency
 

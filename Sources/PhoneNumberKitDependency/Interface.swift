@@ -1,5 +1,4 @@
 import Dependencies
-import PhoneNumberKit
 
 public struct PhoneNumberKitClient {
 	public init(
